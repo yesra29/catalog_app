@@ -9,7 +9,10 @@ class homePage  extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catalog App",style: GoogleFonts.poppins(fontSize: 25),),
+        backgroundColor: Colors.white,
+        title: Text("Catalog App",
+          style: GoogleFonts.poppins(fontSize: 25),
+        ),
       ),
       body: Center(
         child: Container(
