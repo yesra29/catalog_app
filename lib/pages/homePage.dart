@@ -5,6 +5,7 @@ import 'package:flutter_catalog/models/catalog.dart';
 import 'dart:convert';
 
 import 'package:flutter_catalog/widgets/themes.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -143,6 +144,24 @@ class CatalogItem extends StatelessWidget {
                       fontWeight: FontWeight.w300,
                       color: MyTheme.darkBlue),
                 ),
+                ButtonBar(
+                  buttonPadding: EdgeInsets.only(right: 20),
+                  alignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("\$${catalog.price}"),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(MyTheme.darkBlue),
+                      ),
+                        onPressed: () {},
+                        child: Text(
+                          "Buy",
+                          style: TextStyle(color: Colors.white),
+                        ),
+
+                    )
+                  ],
+                ),
               ],
             ))
           ],
@@ -158,10 +177,16 @@ class CatalogImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: 160,
-        padding: EdgeInsets.all(16),
-        // color: MyTheme.creamColor,
-        child: Image.network(image));
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+          decoration: BoxDecoration(
+              color: MyTheme.creamColor,
+              borderRadius: BorderRadius.circular(8)),
+          width: 130,
+          height: 100,
+          padding: EdgeInsets.all(10),
+          child: Image.network(image)),
+    );
   }
 }
