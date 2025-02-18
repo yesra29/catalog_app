@@ -1,6 +1,6 @@
 class CatalogModel {
   static List<Item>  items = [
-    Item(
+    const Item(
       id: 1,
       name: "iPhone 12",
       desc: "Apple iPhone",
