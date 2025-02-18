@@ -37,7 +37,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -59,7 +61,7 @@ class HomeDetailPage extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: const Text(
-                  "Buy",
+                  "Add to Cart",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               )

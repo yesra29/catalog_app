@@ -89,8 +89,8 @@ class CatalogItem extends StatelessWidget {
                       ),
                       onPressed: () {},
                       child: const Text(
-                        "Buy",
-                        style: TextStyle(color: Colors.white),
+                        "Add to Cart",
+                        style: TextStyle(color: Colors.white,fontSize: 12),
                       ),
                     )
                   ],
